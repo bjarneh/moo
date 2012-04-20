@@ -8,4 +8,4 @@ maude hack
     $ ./monologue --help           # will give some info
 
 
-bjarneh@ifi.uio.no
+bjarneh
