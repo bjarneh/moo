@@ -1,0 +1,14 @@
+%domain elements a,b,c
+true => dom(a), dom(b), dom(c) .
+s(b,X),s(c,X) => goal .
+true => s(a,b),s(a,c) .
+dom(X) => e(X,X) .
+e(X,Y) => e(Y,X) .
+e(X,Y) => s(X,Y).
+r(X,Y) => s(X,Y).
+s(X,Y),s(Y,Z) => s(X,Z).
+
+r(X,Y),r(X,Z) => dom(U),s(Y,U),s(Z,U).
+r(a,X),s(X,Y),s(X,Z) => dom(U),s(Y,U),s(Z,U).
+s(X,Y) => e(X,Y);dom(Z),r(X,Z),s(Z,Y). 
+

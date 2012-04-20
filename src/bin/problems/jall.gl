@@ -1,0 +1,4 @@
+true => p(a), q(b).
+q(X), q(Y) => p(X) ; q(X).
+p(fa) => goal.
+q(X) => goal.

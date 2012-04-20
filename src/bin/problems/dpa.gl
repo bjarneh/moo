@@ -1,0 +1,16 @@
+% dpa.gl
+true => dom(a),dom(b),dom(c).
+
+true => re(a,b),re(a,c).
+re(b,X),re(c,X) => goal.
+dom(X) => e(X,X).
+e(X,Y) => e(Y,X).
+e(X,Y),re(Y,Z) => re(X,Z).
+
+e(X,Y) => re(X,Y).
+r(X,Y) => re(X,Y).
+re(X,Y) => e(X,Y);r(X,Y).
+
+r(X,Y),r(X,Z) => dom(U),r(Y,U),r(Z,U).
+
+

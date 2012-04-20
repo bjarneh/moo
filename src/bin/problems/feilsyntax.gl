@@ -1,0 +1,4 @@
+p(X) => p(f(X)) ; q(X).
+true => p(a).
+p(f(a)) => goal.
+q(X) => goal.

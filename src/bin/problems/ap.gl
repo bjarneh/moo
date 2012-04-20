@@ -1,0 +1,8 @@
+
+true => dom(c).
+
+p(X), f(X,Y), f(Y,Z) => q(Z).
+p(X), q(X) => goal.
+q(X), f(X,Y) => p(Y).
+dom(X) => p(X) ; q(X) .
+dom(X) => dom(Y), f(X,Y) .

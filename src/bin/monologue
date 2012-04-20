@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+monologue
+
+this is the entry point for the coherent logic theorem
+prover, it will add sys.path information such that the actual
+application can be located. input files will be read, and they
+should be in geolog format. after they are read and parsed,
+hopefully a Maude module will pop out on the other side, able
+to prove your theorem.
+"""
+
+__author__='bjarneh@ifi.uio.no'
+__version__='monologue 0.1' 
+
+if __name__ == '__main__':
+    import sys, os
+##     pwd = os.environ['PWD']
+##     sys.path.append(pwd[:-4])
+    rightHere = os.path.dirname( os.path.abspath( __file__ ) )
+    sys.path.append(rightHere[:-4])
+    from no.uio.ifi.bjarneh.cl.main import Main
+    m = Main(sys.argv[1:])
